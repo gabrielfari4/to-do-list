@@ -7,6 +7,7 @@ const Input = ({ type, value, onChange }) => {
             value={value}
             onChange={onChange}
             className={styles.input}
+            placeholder={"Digite um título para a tarefa"}
         />
     )
 }

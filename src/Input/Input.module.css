@@ -2,4 +2,15 @@
 .input {
     width: 20vw;
     height: 4vh;
+    padding-left: .5vw;
+    font-size: 1.2em;
+    margin-bottom: 3vh;
+    border-radius: 4px;
+    background-color: var(--cor-input);
+    border: solid 1px var(--cor-bg-dark);
+    color: var(--cor-fonte-texto);
+    &::placeholder {
+        font-family: var(--fonte-overpass);
+        color: var(--cor-violeta);
+    }
 }
