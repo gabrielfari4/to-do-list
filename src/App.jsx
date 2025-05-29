@@ -2,6 +2,7 @@ import { Children, useState } from 'react'
 import './App.css'
 import Input from './Input'
 import Textarea from './Textarea'
+import Botao from './Botao'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -17,6 +18,10 @@ function App() {
     setDescription(value)
   }
 
+  const addTask = () => {
+    console.log("Task has been added")
+  }
+
   return (
     <section>
       <h1>To-do List</h1>
@@ -28,8 +33,10 @@ function App() {
       <Textarea
         value={description}
         onChange={handleDescription}
-      >
-      </Textarea>
+      />
+      <Botao 
+        onClick={addTask}
+      />
       <p>{description}</p>
     </section>
   )
