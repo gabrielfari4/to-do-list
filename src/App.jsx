@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import './App.css'
 import Input from './Input'
+import Textarea from './Textarea'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -21,11 +22,15 @@ function App() {
       <h1>To-do List</h1>
       <Input 
         type="text"
-        value={title.toUpperCase()}
+        value={title}
         onChange={handleTitle}
       />
-      
-      <p>{title}</p>
+      <Textarea
+        value={description}
+        onChange={handleDescription}
+      >
+      </Textarea>
+      <p>{description}</p>
     </section>
   )
 }
