@@ -1,3 +1,24 @@
 :root {
+  --cor-marfim: #F8FDEA;
+  --cor-cinza: #ACA9B0;
+  --cor-cinza-ardosia: #74788C;
+  --cor-violeta: #5A4372;
+  --cor-violeta-russo: #3D2B53;
+  --cor-roxo: #322837;
 
+  --fonte-orbitron: 'Orbitron', sans-serif;
+  --fonte-overpass: 'Overpass', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-orbitron);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
