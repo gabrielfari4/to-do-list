@@ -1,8 +1,8 @@
 import { Children, useState } from 'react'
 import './App.css'
-import Input from './Input'
-import Textarea from './Textarea'
-import Botao from './Botao'
+import Input from './components/Input'
+import Textarea from './components/Textarea'
+import Botao from './components/Botao'
 
 function App() {
   const [title, setTitle] = useState('')
@@ -33,7 +33,8 @@ function App() {
      return [...oldTaskList, newTask]
     })
     setCountId((countId) => countId + 1)
-    // setTaskList(taskList.sort((t1, t2) => t2 - t1))
+    // let newList = taskList.sort((t1, t2) => t2.id - t1.id)
+    // setTaskList(newList)
     console.log(taskList);
     
     setTitle('')
@@ -55,7 +56,7 @@ function App() {
       <Botao 
         onClick={addTask}
       />
-      {taskList.map((task, index) => {
+      {taskList.sort((t1, t2) => t2.id  - t1.id).map((task, index) => {
         return <p  key={index}>{task.title}</p>
       })}
     </section>
