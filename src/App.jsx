@@ -10,7 +10,6 @@ function App() {
   const [description, setDescription] = useState('')
   const [taskList, setTaskList] = useState([])
   const [countId, setCountId] = useState(1)
-  // const [completed, setCompleted] = useState(false)
 
   const handleTitle = (event) => {
     const value = event.target.value.toUpperCase()
@@ -39,21 +38,6 @@ function App() {
     setTitle('')
     setDescription('')
   }
-
-  /* const handleCompleted = (taskCompleted) => {
-    console.log(taskList.some(task => task.id === taskCompleted.id));
-    
-    let taskSelecionada = taskList.some(task => task.id === taskCompleted.id)
-
-    if (taskSelecionada) {
-      return setTaskList(
-        taskList[taskList.indexOf(taskCompleted)] = {
-          ...taskCompleted,
-          completed: setCompleted(!completed)
-        }
-      )
-    }
-  } */
 
     const toggleCompleted = (id) => {
     setTaskList((prev) =>
@@ -86,8 +70,7 @@ function App() {
         {taskList.sort((t1, t2) => t2.id  - t1.id).map((task) => {
           return <li>
               <Tarefa 
-                {...task} 
-                // completed={completed} 
+                {...task}
                 toggleCompleted={toggleCompleted}
                 key={task.id} onDeleting={deleteTask}/>
             </li>
