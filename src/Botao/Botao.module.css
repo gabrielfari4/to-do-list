@@ -9,4 +9,5 @@
     border-radius: 8px;
     background-color: var(--cor-input-dark);
     color: var(--cor-fonte-texto);
+    cursor: pointer;
 }
