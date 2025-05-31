@@ -5,6 +5,11 @@ import Textarea from './components/Textarea'
 import Botao from './components/Botao'
 import Tarefa from './components/Tarefa'
 
+// TODO: responsividade
+// TODO: lógica filtro
+// TODO: lógica dark mode
+// TODO: lógica localStorage
+
 function App() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
