@@ -1,0 +1,24 @@
+
+.div {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.tarefa {
+    border: solid 2px var(--cor-fonte-texto);
+    border-radius: 4px;
+    font-size: 1.5em;
+    width: 30vw;
+    padding-left: .5vw;
+    margin-right: .5vw;
+    height: 5vh;
+}
+
+.img {
+    height: 5vh;
+    margin-right: .1vw;
+    color: var(--cor-bg-dark);
+    cursor: pointer;
+}
+
