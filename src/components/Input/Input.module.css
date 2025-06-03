@@ -12,5 +12,12 @@
     &::placeholder {
         font-family: var(--fonte-overpass);
         color: var(--cor-violeta);
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+    .input {
+        width: 30vw;
     }
 }

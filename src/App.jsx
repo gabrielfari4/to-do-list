@@ -27,6 +27,8 @@ function App() {
   }
 
   const addTask = () => {
+    if (title === '') return
+
     const newTask = {
         id: countId,
         title: title,
@@ -56,21 +58,27 @@ function App() {
     setTaskList(taskList.filter(task => task.id !== id))
   }
 
+  const aoSalvar = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <section>
       <h1>To-do List</h1>
-      <Input 
-        type="text"
-        value={title}
-        onChange={handleTitle}
-      />
-      <Textarea
-        value={description}
-        onChange={handleDescription}
-      />
-      <Botao 
-        onClick={addTask}
-      />
+      <form onSubmit={aoSalvar}>
+        <Input 
+          type="text"
+          value={title}
+          onChange={handleTitle}
+        />
+        <Textarea
+          value={description}
+          onChange={handleDescription}
+        />
+        <Botao 
+          onClick={addTask}
+        />
+      </form>
       <ul>
         {taskList.sort((t1, t2) => t2.id  - t1.id).map((task) => {
           return <li>

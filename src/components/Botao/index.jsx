@@ -5,6 +5,7 @@ const Botao = ({ onClick }) => {
         <button
             className={styles.botao}
             onClick={onClick}
+            type="submit"
         >
             Adicionar tarefa
         </button>
