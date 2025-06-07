@@ -7,7 +7,9 @@ const Tarefa = ({ title, onDeleting, id, toggleCompleted, completed }) => {
 
     return (
         <div className={styles.div}>
-            <p className={styles.tarefa}>{title}</p>
+            <div className={styles.divTarefa}>
+                <p className={styles.tarefa}>{title}</p>
+            </div>
             {!completed
                 ? <CheckboxBlank className={styles.img} onClick={() => toggleCompleted(id)}/> 
                 : <CheckboxMarked className={styles.img} onClick={() => toggleCompleted(id)}/>

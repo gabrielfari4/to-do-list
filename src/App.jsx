@@ -42,11 +42,10 @@ function App() {
     setCountId((countId) => countId + 1)
     console.log(taskList);
     
-    setTitle('')
-    setDescription('')
+    
   }
 
-    const toggleCompleted = (id) => {
+  const toggleCompleted = (id) => {
     setTaskList((prev) =>
       prev.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task
@@ -60,6 +59,8 @@ function App() {
 
   const aoSalvar = (event) => {
     event.preventDefault()
+    setTitle('')
+    setDescription('')
   }
 
   return (
