@@ -12,6 +12,13 @@ h1 {
   margin-bottom: 10vh;
 }
 
+div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1vw;
+  margin-top: 1vh;
+}
+
 @media screen and (max-width: 1280px) and (min-width: 769px) {
     h1 {
         font-size: 5rem;
@@ -34,6 +41,9 @@ h1 {
   h1 {
         font-size: 2.5rem;
         margin-bottom: 5vh;
+  }
+  div {
+    flex-direction: column;
   }
 }
 

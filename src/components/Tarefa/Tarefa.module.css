@@ -1,5 +1,5 @@
 
-.div {
+.container {
     display: flex;
     align-items: center;
     height: fit-content;
@@ -72,10 +72,14 @@
 }
 
 @media screen and (max-width: 319px) {
+    .container {
+        flex-direction: row;
+    }
     .divTarefa {
         width: 60vw;
     }
     .tarefa {
-        font-size: 1em;
+        font-size: .7em;
+        padding-top: .6vh;
     }
 }

@@ -6,7 +6,7 @@ import Trash from "./assets/trash.svg?react";
 const Tarefa = ({ title, onDeleting, id, toggleCompleted, completed }) => {
 
     return (
-        <div className={styles.div}>
+        <div className={styles.container}>
             <div className={styles.divTarefa}>
                 <p className={styles.tarefa}>{title}</p>
             </div>
